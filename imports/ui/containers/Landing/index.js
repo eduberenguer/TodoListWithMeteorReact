@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from '@reach/router'
+import { Link, Div } from './styles'
 
 export const Landing = () => {
     return(
-        <div>
+        <Div>
             <Link to='/login'>Login</Link>
             <Link to='/register'>Register</Link>
-        </div>
+        </Div>
     )
 }

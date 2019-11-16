@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { Link, navigate } from '@reach/router'
+import React from 'react'
+import { navigate } from '@reach/router'
 import { useInputValue } from '../../../hooks/useInputValue'
-
+import { Title, Button, Form, Input } from './styles'
 import { logic } from '../../../logic'
 
-const Register = () => {
+export const Register = () => {
     const name = useInputValue('')
     const email = useInputValue('')
     const password = useInputValue('')
@@ -23,31 +23,28 @@ const Register = () => {
     }
     return (
         <div>
-            <Link to='/'>Home</Link>
-            <Link to='/login'>Login</Link>
-            <form onSubmit={handleSubmit}>
-                <input
+            <Title>Register</Title>
+            <Form onSubmit={handleSubmit}>
+                <Input
                     type="text"
                     value={name.value}
                     onChange={name.onChange}
                     placeholder='Name...'>
-                </input>
-                <input
+                </Input>
+                <Input
                     type="text"
                     value={email.value}
                     onChange={email.onChange}
                     placeholder='Email...'>
-                </input>
-                <input
+                </Input>
+                <Input
                     type="password"
                     value={password.value}
                     onChange={password.onChange}
                     placeholder='Password...'>
-                </input>
-                <button>Register</button>
-            </form>
+                </Input>
+                <Button>Sign in</Button>
+            </Form>
         </div>
     )
 }
-
-export default Register

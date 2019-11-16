@@ -1,10 +1,9 @@
 import React from 'react'
-import {Link, navigate} from '@reach/router'
 import { useInputValue } from '../../../hooks/useInputValue'
-
 import { logic } from '../../../logic'
+import { Form, Input, Button, Title } from './styles'
 
-const Login = (props) => {
+export const Login = (props) => {
     const email = useInputValue('')
     const password = useInputValue('')
 
@@ -22,25 +21,22 @@ const Login = (props) => {
     }
     return (
         <div>
-            <Link to='/'>Landing</Link>
-            <Link to='/register'>Register</Link>
-            <form onSubmit={onLogin}>
-                <input
+            <Title>Login</Title>
+            <Form onSubmit={onLogin}>
+                <Input
                     type="text"
                     value={email.value}
                     onChange={email.onChange}
                     placeholder='Email...'>
-                </input>
-                <input
+                </Input>
+                <Input
                     type="password"
                     value={password.value}
                     onChange={password.onChange}
                     placeholder='Password...'>
-                </input>
-                <button>Login</button>
-            </form>
+                </Input>
+                <Button>Log in</Button>
+            </Form>
         </div>
     )
 }
-
-export default Login

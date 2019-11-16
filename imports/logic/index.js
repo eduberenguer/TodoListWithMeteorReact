@@ -92,6 +92,16 @@ const logic = {
                 if(!todo) throw new LogicError('Todo not found')
                 return Todos.update({'_id':id}, { 'userId': userId, 'text': newText})
             })
+    },
+
+    retrieveTodo(id){
+        return Promise.resolve()
+            .then(() => {
+                return Todos.findOne({'_id': id})
+            })
+            .then(todo => {
+                return todo
+            })
     }
 }
 
