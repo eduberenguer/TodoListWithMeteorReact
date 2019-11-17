@@ -107,7 +107,7 @@ export const Title = styled.h2`
 `
 
 export const Todo = styled.li`
-  text-align: center;
   font-size: 2em;
   margin-right: 100px;
+  width: 1000vw;
 `
