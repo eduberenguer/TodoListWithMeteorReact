@@ -1,4 +1,10 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+
+export const Error = styled.p`
+    margin-top: 10px;
+    font-size: 1.5em;
+    color:red;
+`
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -18,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     background: #fefefe;
     height: 100vh;
     margin: 0 auto;
-    max-width: 100vh;
+    max-width: 100vw;
     overscroll-behavior: none;
   }
 

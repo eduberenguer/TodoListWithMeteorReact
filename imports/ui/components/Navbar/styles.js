@@ -24,4 +24,8 @@ export const Link = styled(LinkRouter)`
     width: 100%;
     height: 100%;
     justify-content: center;
+    &:hover {
+        color: black;
+        cursor: pointer;
+    }
 `

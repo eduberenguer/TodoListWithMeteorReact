@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { logic } from '../../../logic'
 import { Title, Input, Button, Form, Todo, ContainerTodos,
-        ContainerTodo, Header, ButtonLogout, ContainerButtons, WithoutTodos } from './styles'
+        ContainerTodo, Header, ButtonLogout, ContainerButtons, WithoutTodos, ActionsButtons } from './styles'
 import {navigate} from "@reach/router"
 
 export const Home = (props) =>  {
@@ -62,8 +62,8 @@ export const Home = (props) =>  {
                                 <ContainerTodo>
                                     <Todo>{item.text}</Todo>
                                     <ContainerButtons>
-                                        <Button onClick={e => {e.preventDefault(); deleteTodo(item.id)}}>Delete</Button>
-                                        <Button onClick={e => {e.preventDefault(); updateTodo(item.id)}}>Update</Button>
+                                        <ActionsButtons onClick={e => {e.preventDefault(); deleteTodo(item.id)}}>Delete</ActionsButtons>
+                                        <ActionsButtons onClick={e => {e.preventDefault(); updateTodo(item.id)}}>Update</ActionsButtons>
                                     </ContainerButtons>
                                 </ContainerTodo>
                             </div>
