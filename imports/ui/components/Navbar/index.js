@@ -4,11 +4,11 @@ import { MdViewAgenda, MdHome} from 'react-icons/md'
 
 const SIZE = '70px'
 
-export const Navbar = () => {
+export const Navbar = (props) => {
     return (
         <Nav>
-            <Link to='/'><MdViewAgenda size={SIZE} /></Link>
-            <Link to='/home'><MdHome size={SIZE} /></Link>
+            {props.home && <Link to='/'><MdViewAgenda size={SIZE} /></Link>}
+            {!props.home && <Link to='/home'><MdHome size={SIZE} /></Link>}
         </Nav>
     )
 }

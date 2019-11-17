@@ -40,7 +40,8 @@ const App = () =>{
                 <Update path='/todo/:id' userId={isAuth}/>
                 <NotFound default/>
             </Router>
-            <Navbar />
+            {isAuth && <Navbar />}
+            {!isAuth && <Navbar home={true}/>}
         </div>
     )
 }

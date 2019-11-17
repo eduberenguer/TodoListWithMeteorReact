@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link, Div } from './styles'
+import { Link, Div, Img } from './styles'
 
 export const Landing = () => {
     return(
         <Div>
-            <Link to='/login'>Login</Link>
+            <Img />
             <Link to='/register'>Register</Link>
+            <Link to='/login'>Login</Link>
         </Div>
     )
 }

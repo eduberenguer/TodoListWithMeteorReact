@@ -2,12 +2,15 @@ import React from 'react'
 import { navigate } from '@reach/router'
 import { useInputValue } from '../../../hooks/useInputValue'
 import { Title, Button, Form, Input } from './styles'
+import { Error } from '../../../styles/GlobalStyles'
 import { logic } from '../../../logic'
+import { useInputError } from '../../../hooks/useInputError'
 
 export const Register = () => {
     const name = useInputValue('')
     const email = useInputValue('')
     const password = useInputValue('')
+    const [error, setError] = useInputError()
 
     const handleSubmit = (e) =>{
         e.preventDefault()
@@ -19,6 +22,9 @@ export const Register = () => {
         logic.register({newUser})
             .then(() => {
                 navigate('/login')
+            })
+            .catch(({ message }) => {
+                setError(message)
             })
     }
     return (
@@ -44,6 +50,7 @@ export const Register = () => {
                     placeholder='Password...'>
                 </Input>
                 <Button>Sign in</Button>
+                {error && <Error>{error}</Error>}
             </Form>
         </div>
     )

@@ -2,10 +2,13 @@ import React from 'react'
 import { useInputValue } from '../../../hooks/useInputValue'
 import { logic } from '../../../logic'
 import { Form, Input, Button, Title } from './styles'
+import { Error } from '../../../styles/GlobalStyles'
+import { useInputError } from '../../../hooks/useInputError'
 
 export const Login = (props) => {
     const email = useInputValue('')
     const password = useInputValue('')
+    const [error, setError] = useInputError('')
 
     const onLogin = (e) => {
         e.preventDefault()
@@ -17,6 +20,9 @@ export const Login = (props) => {
             .then((id) => {
                 window.localStorage.setItem('id', id)
                 props.loggedIn()
+            })
+            .catch(({ message }) => {
+                setError(message)
             })
     }
     return (
@@ -36,6 +42,7 @@ export const Login = (props) => {
                     placeholder='Password...'>
                 </Input>
                 <Button>Log in</Button>
+                {error && <Error>{error}</Error>}
             </Form>
         </div>
     )

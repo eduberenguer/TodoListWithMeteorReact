@@ -5,6 +5,9 @@ export const Form = styled.form`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
+  border: solid black 1px;
+  padding: 50px;
 `
 
 export const Header = styled.div`
@@ -17,19 +20,23 @@ export const ButtonLogout = styled.button`
   width: 10%;
   height: 10%;
   padding: 10px;
-  background-color: #FF0000;
+  background-color: #ff434d;
   color: #FFF;
   font-size: 1.5em;
+  &:hover {
+    background-color: #ff0003;
+    cursor: pointer;
+  }
 `
 
 export const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 3px;
-  margin-bottom: 8px;
+  margin-bottom: 30px;
   padding: 8px 4px;
   display: block;
-  width: 100%;
-  font-size: 3em;
+  width: 50vw;
+  font-size: 2em;
 `
 
 export const WithoutTodos = styled.p`
@@ -38,37 +45,64 @@ export const WithoutTodos = styled.p`
 `
 
 export const ContainerTodos = styled.div`
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  overflow: scroll;
 `
 
 export const ContainerTodo = styled.div`
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 80vw;
+  padding: 10px;
 `
 export const ContainerButtons = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 100vw;
   justify-content: flex-end;
 `
 
 export const Button = styled.button`
+  border: 1px solid #ccc;
   background: #8d00ff;
   border-radius: 3px;
   color: #fff;
+  display: block;
+  width: 30vw;
   text-align: center;
-  font-size: 2em;
-  padding: 5px;
+  font-size: 1em;
+  padding: 10px;
+  &:hover {
+    background-color: #FFF;
+    color: #8d00ff;
+    cursor: pointer;
+  }
+`
+export const ActionsButtons = styled.button`
+  border: 1px solid #ccc;
+  background: #8d00ff;
+  border-radius: 3px;
+  color: #fff;
+  width: 10vw;
+  text-align: center;
+  font-size: 1em;
+  &:hover {
+    background-color: #FFF;
+    color: #8d00ff;
+    cursor: pointer;
+  }
 `
 
 export const Title = styled.h2`
-  margin-top: 50px;
   width: 100%;
   text-align: center;
-  font-size: 5em;
+  font-size: 4em;
 `
 
 export const Todo = styled.li`

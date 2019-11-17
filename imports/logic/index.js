@@ -9,7 +9,7 @@ const logic = {
     },
 
     _validateEmail(email) {
-        if (!validateEmail(email)) throw new LogicError('invalid email')
+        if (!validateEmail(email)) throw new LogicError('Invalid email')
     },
 
     register({newUser}) {
