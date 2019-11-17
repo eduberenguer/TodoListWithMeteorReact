@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { Link as LinkRouter } from '@reach/router'
 
 export const Div = styled.div`
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -20,7 +19,7 @@ export const Img = styled.div`
 export const Link = styled(LinkRouter)`
   border: 1px solid #ccc;
   border-radius: 3px;
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 30px 4px;
   display: block;
   width: 50vw;

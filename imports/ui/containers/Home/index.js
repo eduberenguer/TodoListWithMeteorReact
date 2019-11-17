@@ -48,6 +48,7 @@ export const Home = (props) =>  {
                 <Input
                     type="text"
                     placeholder='Insert new todo...'
+                    maxLength= "25"
                     onChange={(e) => setTodo(e.target.value)}
                     value={todo}>
                 </Input>

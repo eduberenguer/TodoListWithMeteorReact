@@ -3,7 +3,6 @@ import { Router, Redirect, navigate } from '@reach/router'
 import { GlobalStyle } from '../styles/GlobalStyles'
 import { Logo } from './components/Logo'
 import { Navbar } from './components/Navbar'
-
 import { Home } from './containers/Home'
 import { NotFound } from "./containers/NotFound";
 import { Login } from './containers/Login'

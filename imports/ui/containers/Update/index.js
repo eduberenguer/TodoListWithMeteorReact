@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import {navigate} from "@reach/router"
+import {navigate} from '@reach/router'
 import { Title, Button, Form, Input, CurrentTask } from './styles'
 import { useInputValue } from '../../../hooks/useInputValue'
 
